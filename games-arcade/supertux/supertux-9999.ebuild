@@ -10,7 +10,6 @@ DESCRIPTION="A game similar to Super Mario Bros."
 HOMEPAGE="https://supertux.org/"
 
 EGIT_REPO_URI="https://github.com/SuperTux/supertux.git"
-#inherit git-r3
 
 LICENSE="GPL-2+ GPL-3+ ZLIB MIT CC-BY-SA-2.0 CC-BY-SA-3.0"
 SLOT="0"
@@ -30,11 +29,6 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
-
-#PATCHES=(
-#	"${FILESDIR}"/${PN}-0.4.0-{desktop,license,icon}.patch
-#	"${FILESDIR}"/${PN}-0.5.0-{obstack,tinygettext}.patch
-#)
 
 src_prepare() {
 	cmake-utils_src_prepare
