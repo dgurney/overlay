@@ -10,4 +10,7 @@
 # i3-gaps live ebuild
 >=x11-wm/i3-gaps-9999
 
+# Daniel Gurney <dgurney99@gmail.com> (18 Dec 2017)
+# Telegram alpha versions
+>=net-im/telegram-desktop-alpha-bin-1.2.3 
 
