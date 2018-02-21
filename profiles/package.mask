@@ -13,3 +13,7 @@
 # Daniel Gurney <dgurney99@gmail.com> (18 Dec 2017)
 # snes9x live ebuild
 >=games-emulation/snes9x-9999
+
+# Daniel Gurney <dgurney99@gmail.com> (21 Feb 2018)
+# htop live ebuild
+>=sys-process/htop-9999
