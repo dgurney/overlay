@@ -36,8 +36,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	rm missing || die
-
 	default
 	eautoreconf
 }
