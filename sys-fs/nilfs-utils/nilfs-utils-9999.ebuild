@@ -8,7 +8,7 @@ inherit multilib git-r3 linux-info autotools
 DESCRIPTION="A New Implementation of a Log-structured File System for Linux"
 HOMEPAGE="http://nilfs.sourceforge.net/"
 EGIT_REPO_URI="https://github.com/nilfs-dev/nilfs-utils"
-EGIT_BRANCH="v2.2.y"
+#EGIT_BRANCH="v2.2.y"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 IUSE="static-libs"
