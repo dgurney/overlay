@@ -13,7 +13,6 @@ EGIT_REPO_URI="https://github.com/SuperTux/supertux.git"
 
 LICENSE="GPL-2+ GPL-3+ ZLIB MIT CC-BY-SA-2.0 CC-BY-SA-3.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 RDEPEND="dev-games/physfs
