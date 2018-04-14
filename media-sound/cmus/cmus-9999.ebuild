@@ -10,7 +10,7 @@ EGIT_REPO_URI="https://github.com/cmus/cmus.git"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="aac alsa ao cue cdio cddb discid debug examples ffmpeg +flac jack libsamplerate
+IUSE="aac alsa ao cue cdio cddb discid debug examples +ffmpeg +flac jack libsamplerate
 	+mad mikmod modplug mp4 musepack opus oss pidgin pulseaudio tremor +unicode
 	+vorbis wavpack"
 
