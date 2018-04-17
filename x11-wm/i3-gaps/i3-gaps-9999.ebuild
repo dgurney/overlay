@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-
+# modifications by Daniel Gurney for his overlay
 EAPI=6
 
 inherit autotools git-r3
@@ -53,7 +53,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local myeconfargs=( --enable-debug=no )  # otherwise injects -O0 -g
+	local myeconfargs=( --enable-debug=no --disable-sanitizers )  # otherwise injects -O0 -g
 	econf "${myeconfargs[@]}"
 }
 
