@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-
+# Modified by Daniel Gurney for his overlay
 EAPI=6
 
 inherit multilib git-r3 linux-info autotools

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# changes by Daniel Gurney for his overlay
+# Modified by Daniel Gurney for his overlay
 EAPI=6
 inherit autotools autotools git-r3 eutils scons-utils
 
