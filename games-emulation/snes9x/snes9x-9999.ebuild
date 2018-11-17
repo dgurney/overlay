@@ -1,17 +1,17 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# Modified by Daniel Gurney for his overlay
+
 EAPI=6
-inherit git-r3 autotools eutils flag-o-matic multilib gnome2-utils
+
+inherit autotools flag-o-matic gnome2-utils xdg-utils git-r3
 
 DESCRIPTION="Super Nintendo Entertainment System (SNES) emulator"
 HOMEPAGE="https://github.com/snes9xgit/snes9x"
 EGIT_REPO_URI="https://github.com/snes9xgit/${PN}.git"
 
-
 LICENSE="Snes9x GPL-2 GPL-2+ LGPL-2.1 LGPL-2.1+ ISC MIT ZLIB Info-ZIP"
 SLOT="0"
-IUSE="alsa debug gtk joystick multilib netplay nls opengl oss png pulseaudio portaudio xinerama +xv"
+IUSE="alsa debug gtk +joystick multilib netplay nls opengl oss png pulseaudio portaudio wayland xinerama +xv"
 RESTRICT="bindist"
 
 RDEPEND="
@@ -22,7 +22,7 @@ RDEPEND="
 	gtk? (
 		dev-libs/glib:2
 		dev-libs/libxml2
-		>=x11-libs/gtk+-3.0:3
+		>=x11-libs/gtk+-3.22:3[wayland?]
 		x11-libs/libXrandr
 		x11-misc/xdg-utils
 		alsa? ( media-libs/alsa-lib )
@@ -34,6 +34,7 @@ RDEPEND="
 		portaudio? ( >=media-libs/portaudio-19_pre )
 		pulseaudio? ( media-sound/pulseaudio )
 		xv? ( x11-libs/libXv )
+		wayland? ( dev-libs/wayland )
 	)
 	xinerama? ( x11-libs/libXinerama )"
 DEPEND="${RDEPEND}
@@ -43,6 +44,10 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${P}/unix"
 
+PATCHES=(
+	"${FILESDIR}"/${PN}-1.53-cross-compile.patch
+	"${FILESDIR}"/${PN}-1.56-build-system.patch
+)
 
 src_prepare() {
 	cd "${WORKDIR}"/${P} || die
@@ -89,6 +94,7 @@ src_configure() {
 			$(use_with pulseaudio)
 			$(use_with portaudio)
 			$(use_with png screenshot)
+			$(use_with wayland)
 		)
 		econf "${myeconfargs[@]}"
 	fi
@@ -106,7 +112,6 @@ src_install() {
 
 	if use gtk; then
 		emake -C ../gtk DESTDIR="${D}" install
-		dodoc ../gtk/{AUTHORS,doc/README}
 	fi
 
 	docinto html
