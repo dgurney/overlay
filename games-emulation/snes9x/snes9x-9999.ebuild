@@ -11,7 +11,7 @@ EGIT_REPO_URI="https://github.com/snes9xgit/${PN}.git"
 
 LICENSE="Snes9x GPL-2 GPL-2+ LGPL-2.1 LGPL-2.1+ ISC MIT ZLIB Info-ZIP"
 SLOT="0"
-IUSE="alsa debug gtk +joystick multilib netplay nls opengl oss png pulseaudio portaudio wayland xinerama +xv"
+IUSE="alsa debug gtk +joystick multilib nls opengl oss png pulseaudio portaudio wayland xinerama +xv"
 RESTRICT="bindist"
 
 RDEPEND="
@@ -71,7 +71,6 @@ src_configure() {
 		--with-system-zip
 		$(use_enable joystick gamepad)
 		$(use_enable debug debugger)
-		$(use_enable netplay)
 		$(use_enable png screenshot)
 		$(use_enable xinerama)
 	)
@@ -88,7 +87,6 @@ src_configure() {
 			$(use_with opengl)
 			$(use_with joystick)
 			$(use_with xv)
-			$(use_with netplay)
 			$(use_with alsa)
 			$(use_with oss)
 			$(use_with pulseaudio)
