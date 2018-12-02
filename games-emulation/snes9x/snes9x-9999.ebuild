@@ -106,7 +106,8 @@ src_compile() {
 src_install() {
 	dobin ${PN}
 
-	dodoc ../docs/{snes9x.conf.default,{changes,control-inputs,controls,snapshots}.txt}
+	dodoc ../unix/snes9x.conf.default
+	dodoc ../docs/{changes,control-inputs,controls,snapshots}.txt
 
 	if use gtk; then
 		emake -C ../gtk DESTDIR="${D}" install
