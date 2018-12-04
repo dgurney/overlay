@@ -1,19 +1,23 @@
---- snes9x-1.56/gtk/configure.ac
-+++ snes9x-1.56/gtk/configure.ac
-@@ -33,8 +33,8 @@
+diff --git a/gtk/configure.ac b/gtk/configure.ac
+index d093ac0..37b7b09 100644
+--- a/gtk/configure.ac
++++ b/gtk/configure.ac
+@@ -33,8 +33,8 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE")
+ AM_GNU_GETTEXT([external])
+ AM_GNU_GETTEXT_VERSION([0.19.2])
  
- AM_GLIB_GNU_GETTEXT
- 
--snes9xlocaledir='${prefix}/${DATADIRNAME}/locale'
--snes9xdatadir='${prefix}/${DATADIRNAME}/snes9x'
+-snes9xlocaledir='${prefix}/share/locale'
+-snes9xdatadir='${prefix}/share/snes9x'
 +snes9xlocaledir='$(localedir)'
 +snes9xdatadir='$(datadir)/snes9x'
  
  AC_SUBST(snes9xlocaledir)
  AC_SUBST(snes9xdatadir)
---- snes9x-1.56/unix/configure.ac
-+++ snes9x-1.56/unix/configure.ac
-@@ -56,37 +56,6 @@
+diff --git a/unix/configure.ac b/unix/configure.ac
+index a988065..1075780 100644
+--- a/unix/configure.ac
++++ b/unix/configure.ac
+@@ -56,37 +56,6 @@ AC_DEFUN([AC_S9X_COMPILER_FLAG],
  # *** Execution begins here ***
  # *****************************
  
