@@ -4,8 +4,9 @@
 EAPI=7
 
 EGO_PN=github.com/dgurney/${PN}
+SRC_URI="https://${EGO_PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
-inherit golang-vcs
+inherit golang-vcs-snapshot
 
 src_compile() {
 	GOPATH="${WORKDIR}/${P}:$(get_golibdir_gopath)" \
@@ -14,7 +15,6 @@ src_compile() {
 
 src_install() {
 	dobin bin/${PN}
-	dodoc humanfreq.1
 }
 
 DESCRIPTION="Quick and dirty MHz scaling_cur_freq reader."
@@ -22,3 +22,4 @@ HOMEPAGE="https://github.com/dgurney/humanfreq"
 
 LICENSE="MIT"
 SLOT="0"
+KEYWORDS="amd64 x86"
