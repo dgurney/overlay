@@ -18,7 +18,7 @@ src_install() {
 	doman ${WORKDIR}/${P}/src/${EGO_PN}/man/${PN}.1
 }
 
-DESCRIPTION="Quick and dirty MHz scaling_cur_freq reader."
+DESCRIPTION="Quick and dirty human-friendly scaling_cur_freq reader."
 HOMEPAGE="https://github.com/dgurney/humanfreq"
 
 LICENSE="MIT"
