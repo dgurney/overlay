@@ -14,7 +14,7 @@ src_compile() {
 
 src_install() {
 	dobin bin/${PN}
-	dodoc humanfreq.1
+	doman ${WORKDIR}/${P}/src/${EGO_PN}/man/${PN}.1
 }
 
 DESCRIPTION="Quick and dirty MHz scaling_cur_freq reader."
