@@ -13,7 +13,7 @@ https://github.com/telegramdesktop/tdesktop/archive/v${PV}.tar.gz -> tdesktop-${
 	x86? ( https://updates.tdesktop.com/tlinux32/tsetup32.${PV}.beta.tar.xz )
 "
 
-LICENSE="telegram"
+LICENSE="GPL-3-with-openssl-exception"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 
