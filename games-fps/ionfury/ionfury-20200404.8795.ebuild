@@ -50,8 +50,6 @@ DEPEND="
 
 PATCHES=(
 	"${FILESDIR}/ionfury-search.patch"
-	# Fix broken clang build until upstream fixes the issue
-	"${FILESDIR}/revert-8396.patch"
 )
 
 src_unpack() {

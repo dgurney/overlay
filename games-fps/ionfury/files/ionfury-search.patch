@@ -1,15 +1,17 @@
---- a/source/duke3d/src/common.cpp	(revision 8262)
+--- a/source/duke3d/src/common.cpp	(revision 8795)
 +++ b/source/duke3d/src/common.cpp	(working copy)
-@@ -798,10 +798,8 @@
+@@ -616,11 +616,10 @@
+     Paths_ParseXDGDesktopFilesFromGOG(homepath, "ION_Fury", Fury_Add_GOG_Linux);
  
      Xfree(homepath);
++   
++    addsearchpath("/usr/share/games/ionfury");
++    addsearchpath("/usr/share/ionfury");
  
 -    addsearchpath("/usr/share/games/jfduke3d");
 -    addsearchpath("/usr/local/share/games/jfduke3d");
 -    addsearchpath("/usr/share/games/eduke32");
 -    addsearchpath("/usr/local/share/games/eduke32");
-+    addsearchpath("/usr/share/games/ionfury");
-+    addsearchpath("/usr/share/ionfury");
  #elif defined EDUKE32_OSX
      char buf[BMAX_PATH];
      int32_t i;
