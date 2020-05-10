@@ -55,7 +55,7 @@ PATCHES=(
 
 src_unpack() {
 	# Extract only the eduke32 archive
-	unpack eduke32_src_${MY_DATE}-${MY_BUILD}.tar.xz
+	unpack eduke32_src_${MY_DATE}-${MY_BUILD}-${EGIT_COMMIT}.tar.xz
 }
 
 src_compile() {
