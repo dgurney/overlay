@@ -7,10 +7,11 @@ inherit desktop toolchain-funcs xdg-utils
 
 MY_BUILD="$(ver_cut 2)"
 MY_DATE="$(ver_cut 1)"
+EGIT_COMMIT="0b0e9923c"
 
 DESCRIPTION="Eduke32 built for Ion Fury"
 HOMEPAGE="http://www.eduke32.com/"
-SRC_URI="http://dukeworld.com/eduke32/synthesis/${MY_DATE}-${MY_BUILD}/eduke32_src_${MY_DATE}-${MY_BUILD}.tar.xz"
+SRC_URI="https://dukeworld.com/eduke32/synthesis/latest/eduke32_src_${MY_DATE}-${MY_BUILD}-${EGIT_COMMIT}.tar.xz"
 
 LICENSE="BUILDLIC GPL-2"
 SLOT="0"
