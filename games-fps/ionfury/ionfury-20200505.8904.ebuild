@@ -21,7 +21,7 @@ REQUIRED_USE="
 	vpx? ( opengl )
 "
 
-S="${WORKDIR}/eduke32_${MY_DATE}-${MY_BUILD}"
+S="${WORKDIR}/eduke32_${MY_DATE}-${MY_BUILD}-${EGIT_COMMIT}"
 
 RDEPEND="
 	clang? (
