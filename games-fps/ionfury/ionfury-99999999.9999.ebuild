@@ -20,7 +20,7 @@ REQUIRED_USE="
 	vpx? ( opengl )
 "
 
-S="${WORKDIR}/ionfury-9999"
+S="${WORKDIR}/ionfury-99999999.9999"
 
 RDEPEND="
 	clang? (
