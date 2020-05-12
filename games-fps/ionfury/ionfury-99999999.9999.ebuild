@@ -15,7 +15,6 @@ EGIT_REPO_URI="https://voidpoint.io/terminx/eduke32.git"
 
 LICENSE="BUILDLIC GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
 IUSE="clang flac gtk opengl png vorbis vpx"
 REQUIRED_USE="
 	vpx? ( opengl )
