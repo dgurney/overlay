@@ -7,7 +7,7 @@ inherit desktop toolchain-funcs xdg-utils
 
 MY_BUILD="$(ver_cut 2)"
 MY_DATE="$(ver_cut 1)"
-EGIT_COMMIT="0b0e9923c"
+EGIT_COMMIT="16a4d06be"
 
 DESCRIPTION="Eduke32 built for Ion Fury"
 HOMEPAGE="http://www.eduke32.com/"
@@ -51,7 +51,6 @@ DEPEND="
 
 PATCHES=(
 	"${FILESDIR}/ionfury-search.patch"
-	"${FILESDIR}/eduke32-20200505.8904-gcc10.patch"
 )
 
 src_unpack() {
