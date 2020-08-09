@@ -51,6 +51,7 @@ DEPEND="
 
 PATCHES=(
 	"${FILESDIR}/ionfury-search.patch"
+	"${FILESDIR}/eduke32-20200505.8904-gcc10.patch"
 )
 
 src_unpack() {
