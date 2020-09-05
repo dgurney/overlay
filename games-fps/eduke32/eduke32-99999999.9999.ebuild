@@ -81,7 +81,6 @@ BDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}/${PN}-20190419.7615-wad2map-buildfix.patch"
 	"${FILESDIR}/${PN}-20190820.8043-log-to-tmpdir.patch"
 	"${FILESDIR}/${PN}-20190820.8043-search-duke3d-path.patch"
 )
@@ -201,7 +200,7 @@ src_install() {
 	make_desktop_entry eduke32-bin EDuke32 eduke32 Game
 	make_desktop_entry mapster32 Mapster32 eduke32 Game
 
-	local DOCS=( package/sdk/samples/*.txt source/build/doc/*.txt source/duke3d/src/lunatic/doc/*.txt )
+	local DOCS=( package/sdk/samples/*.txt source/build/doc/*.txt )
 	use hrp && DOCS+=( "${WORKDIR}"/hrp_readme.txt "${WORKDIR}"/hrp_todo.txt )
 	use offensive && DOCS+=( "${WORKDIR}"/xxx_readme.txt )
 	use opl && DOCS+=( "${WORKDIR}"/opl_readme.txt )
