@@ -7,7 +7,7 @@ inherit desktop toolchain-funcs xdg-utils
 
 MY_BUILD="$(ver_cut 2)"
 MY_DATE="$(ver_cut 1)"
-EGIT_COMMIT="16a4d06be"
+EGIT_COMMIT="156963ddc"
 
 DESCRIPTION="Eduke32 built for Ion Fury"
 HOMEPAGE="http://www.eduke32.com/"
